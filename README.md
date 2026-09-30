@@ -1,1 +1,188 @@
-# nikhil-cyber-cafe
+[index.html](https://github.com/user-attachments/files/32845937/index.html)
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NIKHIL CYBER CAFE & PRESS - Online Digital Services, Printing, Photography and Photo Frames">
+<title>NIKHIL CYBER CAFE & PRESS</title>
+<style>
+:root{
+  --green:#39ff14;
+  --dark:#07110a;
+  --dark2:#101b12;
+  --gold:#ffd43b;
+  --white:#fff;
+  --muted:#c9d2cb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;background:#f5f7f5;color:#172018;line-height:1.6}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:1000;background:rgba(7,17,10,.96);color:#fff;box-shadow:0 3px 18px #0004}
+.nav{max-width:1150px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:13px 20px}
+.logo{font-size:20px;font-weight:900;letter-spacing:.4px}.logo span{color:var(--green)}
+nav{display:flex;gap:22px;align-items:center}nav a{font-weight:700;font-size:14px}nav a:hover{color:var(--green)}
+.menu{display:none;font-size:27px;cursor:pointer}
+.hero{background:radial-gradient(circle at 80% 20%,#244b25 0,#0b190d 45%,#050a06 100%);color:white}
+.hero-inner{max-width:1150px;margin:auto;min-height:570px;display:flex;align-items:center;padding:70px 20px;gap:40px}
+.hero-copy{flex:1}.badge{display:inline-block;padding:7px 13px;border:1px solid var(--green);border-radius:30px;color:var(--green);font-weight:700;margin-bottom:18px}
+h1{font-size:clamp(35px,6vw,65px);line-height:1.05;margin-bottom:18px}h1 span{color:var(--green)}
+.hero p{font-size:18px;color:var(--muted);max-width:650px}
+.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:13px 20px;border-radius:10px;font-weight:800;border:1px solid var(--green);background:var(--green);color:#061006}
+.btn.alt{background:transparent;color:#fff;border-color:#ffffff55}.btn:hover{transform:translateY(-2px)}
+.hero-card{width:360px;min-height:310px;border:1px solid #ffffff24;background:#ffffff0d;border-radius:25px;padding:30px;backdrop-filter:blur(8px);box-shadow:0 20px 50px #0005}
+.hero-card h2{color:var(--gold);margin-bottom:12px}.hero-card li{list-style:none;padding:9px 0;border-bottom:1px solid #ffffff14}.hero-card li::before{content:"✓";color:var(--green);font-weight:bold;margin-right:9px}
+section{padding:75px 20px}.container{max-width:1150px;margin:auto}.section-title{text-align:center;margin-bottom:40px}.section-title h2{font-size:34px}.section-title p{color:#647067;margin-top:7px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;padding:25px;border-radius:17px;border:1px solid #e2e8e2;box-shadow:0 8px 28px #1420150b;transition:.2s}.card:hover{transform:translateY(-5px);box-shadow:0 15px 35px #14201518}
+.icon{font-size:34px;margin-bottom:10px}.card h3{margin-bottom:7px}.card p{color:#647067;font-size:15px}
+.dark-section{background:#09130b;color:#fff}.dark-section .section-title p{color:#b9c3bb}
+.service{background:#102016;border:1px solid #ffffff12}.service p{color:#c5cec7}.service h3{color:#fff}
+.price{display:flex;justify-content:space-between;gap:15px;border-bottom:1px dashed #dce2dc;padding:13px 0}.price:last-child{border:0}.price b{color:#0d6b1b}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-box{background:#0a160b;color:#fff;border-radius:22px;padding:35px}.about-box strong{color:var(--green)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:25px}.contact-box{padding:30px;background:#fff;border-radius:18px;border:1px solid #e2e8e2}.contact-item{padding:12px 0;border-bottom:1px solid #edf0ed}.contact-item:last-child{border:0}
+footer{background:#050b06;color:#aeb8b0;text-align:center;padding:28px 20px}.footer-name{color:#fff;font-weight:800}
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:2000;background:#25d366;color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:28px;box-shadow:0 8px 25px #0004}
+@media(max-width:800px){
+ nav{display:none;position:absolute;top:62px;left:0;right:0;background:#07110a;padding:18px 20px;flex-direction:column;align-items:flex-start}
+ nav.open{display:flex}.menu{display:block}.hero-inner{flex-direction:column;align-items:stretch}.hero-card{width:auto}.grid{grid-template-columns:1fr 1fr}.about,.contact{grid-template-columns:1fr}
+}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.hero-inner{padding-top:50px}section{padding:55px 15px}.nav{padding:12px 15px}.logo{font-size:17px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">NIKHIL <span>CYBER CAFE</span> & PRESS</div>
+    <div class="menu" onclick="toggleMenu()">☰</div>
+    <nav id="nav">
+      <a href="#home" onclick="closeMenu()">Home</a>
+      <a href="#services" onclick="closeMenu()">Services</a>
+      <a href="#pricing" onclick="closeMenu()">Price</a>
+      <a href="#photography" onclick="closeMenu()">Photography</a>
+      <a href="#contact" onclick="closeMenu()">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="badge">आपकी डिजिटल सेवाओं का भरोसेमंद स्थान</div>
+      <h1>NIKHIL <span>CYBER CAFE</span> & PRESS</h1>
+      <p>आपकी सभी ऑनलाइन एवं डिजिटल सेवाएँ एक ही स्थान पर — Online Form, PAN, Voter ID, Passport, RTPS, Printing, Photography और Photo Frame Services.</p>
+      <div class="buttons">
+        <a class="btn" href="tel:8877577482">📞 Call Now</a>
+        <a class="btn alt" href="https://wa.me/918877577482?text=Namaste%20Nikhil%20Cyber%20Cafe%2C%20mujhe%20service%20ki%20jankari%20chahiye." target="_blank">💬 WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h2>हमारी मुख्य सेवाएँ</h2>
+      <ul>
+        <li>PAN Card Apply & Correction</li>
+        <li>Aadhaar Related Services</li>
+        <li>Voter ID & Passport</li>
+        <li>RTPS Certificates</li>
+        <li>Online Form & Scholarship</li>
+        <li>Printing, Photo & Lamination</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+<div class="container">
+  <div class="section-title"><h2>हमारी Services</h2><p>एक ही जगह पर कई जरूरी ऑनलाइन और डिजिटल सेवाएँ</p></div>
+  <div class="grid">
+    <div class="card"><div class="icon">🪪</div><h3>PAN Card</h3><p>New PAN, Correction और PAN से जुड़ी सहायता।</p></div>
+    <div class="card"><div class="icon">👤</div><h3>Aadhaar Services</h3><p>उपलब्ध Aadhaar related online services में सहायता।</p></div>
+    <div class="card"><div class="icon">🗳️</div><h3>Voter ID</h3><p>Voter registration और संबंधित online आवेदन।</p></div>
+    <div class="card"><div class="icon">📘</div><h3>Passport</h3><p>Passport application form filling में सहायता।</p></div>
+    <div class="card"><div class="icon">📄</div><h3>RTPS Certificates</h3><p>जाति, आय, आवासीय आदि certificate applications में सहायता।</p></div>
+    <div class="card"><div class="icon">🎓</div><h3>Scholarship</h3><p>Scholarship और government scheme applications।</p></div>
+    <div class="card"><div class="icon">🖨️</div><h3>Printing</h3><p>Colour & B/W Printing, Photocopy और Lamination।</p></div>
+    <div class="card"><div class="icon">📸</div><h3>Passport Photo</h3><p>Passport size photo, background और photo editing।</p></div>
+    <div class="card"><div class="icon">💳</div><h3>Online Form</h3><p>विभिन्न online forms और applications भरने में सहायता।</p></div>
+  </div>
+</div>
+</section>
+
+<section class="dark-section" id="photography">
+<div class="container">
+  <div class="section-title"><h2>Rudra Photography & Photo Frame</h2><p>Photography, photo editing और customized frame services</p></div>
+  <div class="grid">
+    <div class="card service"><div class="icon">📷</div><h3>Rudra Photography</h3><p>Wedding, family, event और special occasion photography.</p></div>
+    <div class="card service"><div class="icon">🖼️</div><h3>Photo Frame</h3><p>Birthday, Anniversary, Couple, Sister और अन्य custom photo frames.</p></div>
+    <div class="card service"><div class="icon">💍</div><h3>Wedding Services</h3><p>Wedding photo/video packages, album और event coverage के लिए संपर्क करें.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="pricing">
+<div class="container">
+  <div class="section-title"><h2>Popular Services</h2><p>अंतिम शुल्क काम और सरकारी/पोर्टल फीस के अनुसार बदल सकता है</p></div>
+  <div class="card">
+    <div class="price"><span>PAN Card Services</span><b>₹250 से</b></div>
+    <div class="price"><span>Voter ID Assistance</span><b>₹99 से</b></div>
+    <div class="price"><span>Passport Size Photo</span><b>Contact</b></div>
+    <div class="price"><span>Colour / B&W Printing</span><b>Contact</b></div>
+    <div class="price"><span>Photo Frame</span><b>Contact</b></div>
+    <div class="price"><span>Online Form Filling</span><b>Contact</b></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container about">
+  <div>
+    <div class="section-title" style="text-align:left;margin-bottom:20px"><h2>हमारे बारे में</h2><p>Nikhil Cyber Cafe & Press</p></div>
+    <p>हमारे यहाँ विभिन्न online government services, digital form filling, printing, photo services और customized photo frame services के लिए सहायता उपलब्ध है।</p>
+    <div class="buttons"><a class="btn" href="#contact">Contact Us</a></div>
+  </div>
+  <div class="about-box">
+    <h2>📍 हमारा पता</h2>
+    <p style="margin-top:12px">Lal Bangla, Raksa Rahimpur, Dhaka, Bihar</p>
+    <p style="margin-top:12px">📞 <strong>8877577482</strong></p>
+    <p style="margin-top:12px">Rudra Photography: <strong>8877577482 / 9931201513</strong></p>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="section-title"><h2>Contact Us</h2><p>किसी भी सेवा की जानकारी के लिए संपर्क करें</p></div>
+  <div class="contact">
+    <div class="contact-box">
+      <div class="contact-item">📞 <b>Phone:</b> <a href="tel:8877577482">8877577482</a></div>
+      <div class="contact-item">💬 <b>WhatsApp:</b> <a href="https://wa.me/918877577482" target="_blank">Chat on WhatsApp</a></div>
+      <div class="contact-item">📍 <b>Address:</b> Lal Bangla, Raksa Rahimpur, Dhaka, Bihar</div>
+      <div class="contact-item">📸 <b>Photography:</b> Rudra Photography</div>
+    </div>
+    <div class="contact-box">
+      <h3>काम के लिए WhatsApp करें</h3>
+      <p style="margin:10px 0 20px;color:#647067">अपनी जरूरत बताइए और service की जानकारी प्राप्त करें।</p>
+      <a class="btn" href="https://wa.me/918877577482?text=Namaste%2C%20mujhe%20Nikhil%20Cyber%20Cafe%20ki%20service%20chahiye." target="_blank">💬 WhatsApp पर Message करें</a>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<a class="whatsapp" href="https://wa.me/918877577482" target="_blank" aria-label="WhatsApp">☏</a>
+
+<footer>
+  <div class="footer-name">NIKHIL CYBER CAFE & PRESS</div>
+  <p>आपकी सभी ऑनलाइन एवं डिजिटल सेवाएँ एक ही स्थान पर</p>
+  <p style="margin-top:8px">© 2026 All Rights Reserved.</p>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('nav').classList.toggle('open')}
+function closeMenu(){document.getElementById('nav').classList.remove('open')}
+</script>
+</body>
+</html>
